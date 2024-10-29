@@ -17,6 +17,7 @@ body {
 .faixa1 {
     font-family: "Dancing Script", cursive;
     font-size: 30px;
+    text-align: center;
 }
 
 .pages {
@@ -30,8 +31,7 @@ body {
     padding: 20px;
 }
 
-.container {
-    height: 350px;
+.container, .container2, .container3, .container4 {
     width: 90%;
     max-width: 600px;
     background-color: rgb(236, 182, 182);
@@ -42,13 +42,15 @@ body {
     padding: 20px;
 }
 
-.container h1 {
+.container h1, .container2 h1, .container3 h1, .container4 h1 {
     font-family: "Playfair Display", serif;
     font-size: 30px;
+    margin-left: 20px;
 }
 
-.container p {
+.container p, .container2 li, .container3 li, .container4 li {
     font-size: 20px;
+    margin-left: 20px;
 }
 
 #page1 img, #page2 img, #imagemsecao4 {
@@ -60,28 +62,6 @@ body {
     border: 3px solid rgb(239, 84, 84);
 }
 
-.container2, .container3, .container4 {
-    width: 90%;
-    max-width: 450px;
-    background-color: rgb(236, 182, 182);
-    backdrop-filter: blur(20px);
-    border: solid 1.5px black;
-    border-radius: 50px;
-    margin: 20px 0;
-    padding: 20px;
-}
-
-.container2 h1, .container3 h1, .container4 h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 30px;
-}
-
-.container2 li, .container3 li, .container4 li {
-    margin-left: 20px;
-    font-size: 23px;
-}
-
-/* Carrossel Responsivo */
 .carousel {
     display: flex;
     overflow-x: auto;
@@ -89,6 +69,9 @@ body {
     gap: 10px;
     padding: 10px;
     scroll-behavior: smooth;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
 }
 
 .carousel img {
@@ -117,22 +100,16 @@ body {
     border-radius: 5px;
 }
 
-/* Media Queries para telas menores */
+/* Media Queries para Responsividade */
 @media (max-width: 768px) {
     .container, .container2, .container3, .container4 {
         width: 100%;
-        margin-left: 0;
         padding: 15px;
     }
 
     #page1, #page2, #page3, #page4 {
-        margin-left: 0;
         flex-direction: column;
         align-items: center;
-    }
-
-    #page1 img, #page2 img, #imagemsecao4 {
-        margin: 10px 0;
     }
 
     .container h1, .container2 h1, .container3 h1, .container4 h1 {
