@@ -5,7 +5,6 @@ body {
     background-color: lightcoral;
 }
 
-
 #faixa {
     background-color: rgb(235, 204, 204);
     height: 125px;
@@ -21,22 +20,26 @@ body {
 }
 
 .pages {
-    height:600px;
+    height: 600px;
 }
 
-#page1 {
+#page1, #page2, #page3, #page4 {
     display: flex;
     align-items: center;
-    margin-left: 225px;
+    flex-direction: column;
+    padding: 20px;
 }
 
 .container {
     height: 350px;
-    width: 600px;
+    width: 90%;
+    max-width: 600px;
     background-color: rgb(236, 182, 182);
     backdrop-filter: blur(20px);
     border: solid 1.5px black;
     border-radius: 50px;
+    margin: 20px 0;
+    padding: 20px;
 }
 
 .container h1 {
@@ -48,94 +51,55 @@ body {
     font-size: 20px;
 }
 
-#page1 img {
-    height: 500px;
-    width: auto;
-    margin-left: 550px;
+#page1 img, #page2 img, #imagemsecao4 {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    margin: 20px auto;
     border-radius: 30px;
     border: 3px solid rgb(239, 84, 84);
 }
 
-#page2 {
-    display: flex;
-    align-items: center;
-    
-}
-
-#page2 img {
-    height: 500px;
-    width: auto;
-    border-radius: 30px;
-    border: 3px solid rgb(239, 84, 84);
-    margin-left: 125px;
-}
-
-.container2 {
-    height: 450px;
-    width: 450px;
+.container2, .container3, .container4 {
+    width: 90%;
+    max-width: 450px;
     background-color: rgb(236, 182, 182);
     backdrop-filter: blur(20px);
     border: solid 1.5px black;
     border-radius: 50px;
-    margin-left: 150px;
+    margin: 20px 0;
+    padding: 20px;
 }
 
-.container2 h1 {
-    font-size: 30px;
+.container2 h1, .container3 h1, .container4 h1 {
     font-family: "Playfair Display", serif;
-}
-
-.container2 li {
-    margin-left: 40px;
-    font-size: 40px;
-}
-
-#page3 {
-    display: flex;
-    align-items: center;
-    margin-left: 225px;
-    height: 700px;
-}
-
-.container3 {
-    height: 450px;
-    width: 450px;
-    background-color: rgb(236, 182, 182);
-    backdrop-filter: blur(20px);
-    border: solid 1.5px black;
-    border-radius: 50px;
-}
-
-.container3 h1 {
-    font-size: 30px;
-    font-family: "Playfair Display", serif;
-}
-
-.container3 li {
-    margin-left: 30px;
     font-size: 30px;
 }
 
+.container2 li, .container3 li, .container4 li {
+    margin-left: 20px;
+    font-size: 23px;
+}
+
+/* Carrossel Responsivo */
 .carousel {
     display: flex;
-    overflow-x: auto;          /* Ativa o scroll horizontal */
-    scroll-snap-type: x mandatory; /* Define o "snap" obrigatório */
-    gap: 10px;                /* Espaçamento entre as imagens */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
     padding: 10px;
-    scroll-behavior: smooth;  /* Animação suave ao deslizar */
+    scroll-behavior: smooth;
 }
 
-/* Cada item do carrossel */
 .carousel img {
-    width: 300px;             /* Largura fixa das imagens */
-    height: 500px;            /* Altura fixa das imagens */
-    object-fit: cover;        /* Cobre o contêiner sem distorcer */
-    scroll-snap-align: center; /* Centraliza a imagem ao parar o scroll */
-    border-radius: 10px;      /* Bordas arredondadas */
+    width: 250px;
+    height: 400px;
+    object-fit: cover;
+    scroll-snap-align: center;
+    border-radius: 10px;
     border: 3px solid rgb(239, 84, 84);
 }
 
-/* Botões de navegação */
 .carousel-buttons {
     display: flex;
     justify-content: center;
@@ -153,36 +117,57 @@ body {
     border-radius: 5px;
 }
 
-#page4 {
-    display: flex;
-    align-items: center;
-    margin-left: 225px;
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    .container, .container2, .container3, .container4 {
+        width: 100%;
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    #page1, #page2, #page3, #page4 {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #page1 img, #page2 img, #imagemsecao4 {
+        margin: 10px 0;
+    }
+
+    .container h1, .container2 h1, .container3 h1, .container4 h1 {
+        font-size: 24px;
+    }
+
+    .container p, .container2 li, .container3 li, .container4 li {
+        font-size: 18px;
+    }
+
+    .carousel img {
+        width: 200px;
+        height: 300px;
+    }
 }
 
-.container4 {
-    height: 450px;
-    width: 450px;
-    background-color: rgb(236, 182, 182);
-    backdrop-filter: blur(20px);
-    border: solid 1.5px black;
-    border-radius: 50px;
-    margin-left: 450px;
-}
+@media (max-width: 480px) {
+    .faixa1 {
+        font-size: 20px;
+    }
 
-.container4 h1 {
-    font-size: 27px;
-    font-family: "Playfair Display", serif;
-    margin-left: 20px;
-}
+    .container h1, .container2 h1, .container3 h1, .container4 h1 {
+        font-size: 20px;
+    }
 
-.container4 li {
-    margin-left: 30px;
-    font-size: 23px;
-}
+    .container p, .container2 li, .container3 li, .container4 li {
+        font-size: 16px;
+    }
 
-#imagemsecao4 {
-    border: 3px solid rgb(239, 84, 84);
-    height: 500px;
-    width: auto;
-    border-radius: 30px;
+    .carousel img {
+        width: 150px;
+        height: 250px;
+    }
+
+    .carousel-buttons button {
+        font-size: 14px;
+    }
 }
