@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kablammo&family=Playfair+Display:wght@400..900&display=swap');
 
-body, html {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: lightcoral;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightcoral;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -20,52 +24,49 @@ body, html {
 
 .faixa1 {
     font-family: "Dancing Script", cursive;
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: center;
+    padding: 0 20px;
 }
 
 /* Páginas */
 .pages {
-    min-height: 600px;
     padding: 20px;
 }
 
-/* Estilo geral dos containers */
+/* Estilo dos containers */
 .container, .container2, .container3, .container4 {
     background-color: rgb(236, 182, 182);
     backdrop-filter: blur(20px);
     border: 1.5px solid black;
-    border-radius: 50px;
+    border-radius: 30px;
     padding: 20px;
-    box-sizing: border-box;
+    margin: 20px auto;
     max-width: 600px;
     width: 90%;
-    margin: 10px auto;
+    text-align: center;
 }
 
 .container h1, .container2 h1, .container3 h1, .container4 h1 {
     font-family: "Playfair Display", serif;
-    font-size: 1.8em;
-    margin-bottom: 10px;
+    font-size: 2em;
+    margin-bottom: 15px;
 }
 
-.container p {
+.container p, .container2 li, .container3 li, .container4 li {
     font-size: 1.2em;
-}
-
-.container2 li, .container3 li, .container4 li {
-    font-size: 1.2em;
-    margin-left: 1em;
+    line-height: 1.6;
     margin-bottom: 10px;
 }
 
 /* Imagens */
 #page1 img, #page2 img, #imagemsecao4 {
-    max-width: 100%;
+    width: 100%;
+    max-width: 450px;
     height: auto;
-    border-radius: 30px;
+    border-radius: 20px;
     border: 3px solid rgb(239, 84, 84);
-    margin: 10px auto;
+    margin: 15px auto;
 }
 
 /* Carrossel */
@@ -76,12 +77,12 @@ body, html {
     gap: 10px;
     padding: 10px;
     scroll-behavior: smooth;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .carousel img {
-    max-width: 100%;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: auto;
     object-fit: cover;
     scroll-snap-align: center;
@@ -89,7 +90,7 @@ body, html {
     border: 3px solid rgb(239, 84, 84);
 }
 
-/* Botões de navegação */
+/* Botões de navegação do Carrossel */
 .carousel-buttons {
     display: flex;
     justify-content: center;
@@ -98,13 +99,18 @@ body, html {
 }
 
 .carousel-buttons button {
-    padding: 8px 16px;
+    padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
     background-color: rgb(239, 84, 84);
     color: #fff;
     border: none;
     border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.carousel-buttons button:hover {
+    background-color: rgb(200, 60, 60);
 }
 
 /* Layout para PCs */
@@ -112,26 +118,35 @@ body, html {
     #page1, #page2, #page3, #page4 {
         display: flex;
         align-items: center;
-        justify-content: space-around;
-        gap: 20px;
+        justify-content: space-between;
+        gap: 40px;
         margin: 40px 0;
+        padding: 0 20px;
     }
 
     .container {
-        max-width: 500px;
-        margin: 20px;
+        max-width: 550px;
+        padding: 25px;
     }
 
     #page1 img, #page2 img, #imagemsecao4 {
         max-width: 400px;
         margin: 0 20px;
     }
+
+    .container h1, .container2 h1, .container3 h1, .container4 h1 {
+        font-size: 2.2em;
+    }
+
+    .container2 li, .container3 li, .container4 li {
+        font-size: 1.3em;
+    }
 }
 
 /* Layout para Tablets e Celulares */
 @media (max-width: 768px) {
     .faixa1 {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
     #page1, #page2, #page3, #page4 {
@@ -142,11 +157,11 @@ body, html {
     }
 
     .container, .container2, .container3, .container4 {
-        width: 90%;
+        width: 95%;
     }
 
     .container h1, .container2 h1, .container3 h1, .container4 h1 {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
     .container2 li, .container3 li, .container4 li {
@@ -156,7 +171,7 @@ body, html {
     #page1 img, #page2 img, #imagemsecao4 {
         max-width: 90%;
         height: auto;
-        margin: 10px auto;
+        margin: 15px auto;
     }
 
     .carousel img {
@@ -164,7 +179,7 @@ body, html {
     }
 
     .carousel-buttons button {
-        padding: 6px 12px;
+        padding: 8px 16px;
         font-size: 0.9em;
     }
 }
