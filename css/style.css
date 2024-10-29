@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightcoral;
+}
+
+#faixa {
+    background-color: white;
+    height: 125px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pages {
+    height:600px;
+}
