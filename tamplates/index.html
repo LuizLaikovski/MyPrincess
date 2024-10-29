@@ -7,19 +7,75 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header id="faixa">
-        <h1>Minha Princesa</h1>
+    <header id="faixa" class="faixa1">
+        <h1>Minha Princesa 😍</h1>
     </header>
     <section class="pages" id="page1">
         <div class="container">
-            <h1 style="margin-left: 20px;">Minha Garotinha</h1>
-            
+            <h1 style="margin-left: 20px;">Curiosidades da Minha <br> Garotinha: </h1>
+            <p style="margin-left: 20px;">A minha princesa nasceu no dia 24 de Setembro
+            de 2010. Atualmente ela <br> está no 8º ano, no Colégio Policial Feliciano Nunes Pires.
+            A Gabizinha tem como um dos seus esportes favoritos o vôlei.
+            Ela voltou a praticar natação recentemente, devido ao ocorrido do dedo. Minha princesa consegue
+            manter um conversa em inglês tranquilamente.
+            </p>
         </div>
         <img src="../images/Captura de tela 2024-10-29 133616.png" alt="">
     </section>
     <header id="faixa">
 
     </header>
-    <section class="pages"></section>
+    <section class="pages" id="page2">
+        <a href="https://open.spotify.com/intl-pt/track/2plbrEY59IikOBgBGLjaoe?si=3de8f0fabdf9421d"><img src="../images/BrunoMars.jpeg" alt=""></a>
+        <img src="../images/Adele.jpeg  " alt="">
+        <div class="container2">
+            <h1 style="margin-left: 20px;">Cantores favoritos do meu amor:</h1><br>
+            <ul>
+                <li>Bruno Mars</li>
+                <br><br>
+                <li>Adele</li>
+            </ul><br><br><br><br><br>
+            <p style="margin-left: 20px;">Clique na imagem para ver ouvir sua música favorita</p>
+        </div>
+    </section>
+    <header id="faixa"></header>
+    <section class="pages" id="page3">
+        <div class="container3">
+            <h1 style="margin-left: 20px;">Seus Hobbys:</h1>
+            <ul>
+                <li>Tocar Saxofone</li><br>
+                <li>Natação</li><br>
+                <li>Ler a Litúrgia Dominical</li><br>
+                <li>Jogar vôlei</li><br>
+            </ul>
+        </div>
+        <div style="width: 800px; margin-left: 200px;">
+            <div class="carousel" id="carousel">
+                <img src="../images/Oktoberfest.jpg" alt="Foto 7">
+                <img src="../images/sax2.jpg" alt="">
+                <img src="../images/sax3.jpg" alt="">
+                <img src="../images/Saxofone.jpg" alt="">
+            </div>
+            <div class="carousel-buttons">
+                <button onclick="scrollCarousel(-1)">&#10094; Anterior</button>
+                <button onclick="scrollCarousel(1)">Próxima &#10095;</button>
+            </div>
+        </div>
+    </section>
+    <header id="faixa"></header>
+
+
+
+
+
+
+    <script>
+        // Função para controlar a navegação do carrossel
+        function scrollCarousel(direction) {
+            const carousel = document.getElementById('carousel');
+            const scrollAmount = carousel.offsetWidth;
+            carousel.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
