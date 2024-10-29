@@ -1,10 +1,14 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kablammo&family=Playfair+Display:wght@400..900&display=swap');
+
+body, html {
     font-family: Arial, Helvetica, sans-serif;
     background-color: lightcoral;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Header */
 #faixa {
     background-color: rgb(235, 204, 204);
     height: 125px;
@@ -17,22 +21,16 @@ body {
 .faixa1 {
     font-family: "Dancing Script", cursive;
     font-size: 2em;
+    text-align: center;
 }
 
+/* Páginas */
 .pages {
     min-height: 600px;
     padding: 20px;
 }
 
-#page1, #page2, #page3, #page4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin: 20px 0;
-}
-
+/* Estilo geral dos containers */
 .container, .container2, .container3, .container4 {
     background-color: rgb(236, 182, 182);
     backdrop-filter: blur(20px);
@@ -40,23 +38,15 @@ body {
     border-radius: 50px;
     padding: 20px;
     box-sizing: border-box;
-    max-width: 90vw;
-    width: 100%;
-}
-
-.container {
-    height: auto;
     max-width: 600px;
-}
-
-.container2, .container3, .container4 {
-    height: auto;
-    max-width: 450px;
+    width: 90%;
+    margin: 10px auto;
 }
 
 .container h1, .container2 h1, .container3 h1, .container4 h1 {
     font-family: "Playfair Display", serif;
     font-size: 1.8em;
+    margin-bottom: 10px;
 }
 
 .container p {
@@ -64,18 +54,21 @@ body {
 }
 
 .container2 li, .container3 li, .container4 li {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-left: 1em;
+    margin-bottom: 10px;
 }
 
+/* Imagens */
 #page1 img, #page2 img, #imagemsecao4 {
-    width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     height: auto;
     border-radius: 30px;
     border: 3px solid rgb(239, 84, 84);
+    margin: 10px auto;
 }
 
+/* Carrossel */
 .carousel {
     display: flex;
     overflow-x: auto;
@@ -83,17 +76,20 @@ body {
     gap: 10px;
     padding: 10px;
     scroll-behavior: smooth;
+    margin: 10px 0;
 }
 
 .carousel img {
-    width: 100%;
-    max-width: 300px;
+    max-width: 100%;
+    width: 300px;
     height: auto;
+    object-fit: cover;
     scroll-snap-align: center;
     border-radius: 10px;
     border: 3px solid rgb(239, 84, 84);
 }
 
+/* Botões de navegação */
 .carousel-buttons {
     display: flex;
     justify-content: center;
@@ -111,10 +107,42 @@ body {
     border-radius: 5px;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Layout para PCs */
+@media (min-width: 769px) {
+    #page1, #page2, #page3, #page4 {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 20px;
+        margin: 40px 0;
+    }
+
+    .container {
+        max-width: 500px;
+        margin: 20px;
+    }
+
+    #page1 img, #page2 img, #imagemsecao4 {
+        max-width: 400px;
+        margin: 0 20px;
+    }
+}
+
+/* Layout para Tablets e Celulares */
 @media (max-width: 768px) {
     .faixa1 {
         font-size: 1.5em;
+    }
+
+    #page1, #page2, #page3, #page4 {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+        padding: 0 10px;
+    }
+
+    .container, .container2, .container3, .container4 {
+        width: 90%;
     }
 
     .container h1, .container2 h1, .container3 h1, .container4 h1 {
@@ -122,20 +150,21 @@ body {
     }
 
     .container2 li, .container3 li, .container4 li {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     #page1 img, #page2 img, #imagemsecao4 {
         max-width: 90%;
+        height: auto;
+        margin: 10px auto;
     }
 
-    #page1, #page2, #page3, #page4 {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
+    .carousel img {
+        width: 80%;
     }
 
-    .container {
-        width: 90%;
+    .carousel-buttons button {
+        padding: 6px 12px;
+        font-size: 0.9em;
     }
 }
