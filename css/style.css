@@ -16,17 +16,16 @@ body, html {
 #faixa {
     background-color: rgb(235, 204, 204);
     height: 125px;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .faixa1 {
     font-family: "Dancing Script", cursive;
     font-size: 2.5em;
     text-align: center;
-    padding: 0 20px;
 }
 
 /* Páginas */
@@ -34,12 +33,12 @@ body, html {
     padding: 20px;
 }
 
-/* Estilo dos containers */
+/* Containers */
 .container, .container2, .container3, .container4 {
     background-color: rgb(236, 182, 182);
     backdrop-filter: blur(20px);
     border: 1.5px solid black;
-    border-radius: 30px;
+    border-radius: 20px;
     padding: 20px;
     margin: 20px auto;
     max-width: 600px;
@@ -78,16 +77,23 @@ body, html {
     padding: 10px;
     scroll-behavior: smooth;
     margin: 20px 0;
+    width: 100%;
+    max-width: 100%;
 }
 
 .carousel img {
-    width: 100%;
-    max-width: 300px;
+    max-width: 90%;
+    width: 300px;
     height: auto;
     object-fit: cover;
     scroll-snap-align: center;
     border-radius: 10px;
     border: 3px solid rgb(239, 84, 84);
+    transition: transform 0.2s ease;
+}
+
+.carousel img:hover {
+    transform: scale(1.05);
 }
 
 /* Botões de navegação do Carrossel */
@@ -174,8 +180,16 @@ body, html {
         margin: 15px auto;
     }
 
+    .carousel {
+        flex-direction: row;
+        width: 100%;
+        gap: 5px;
+        padding: 5px;
+    }
+
     .carousel img {
-        width: 80%;
+        width: 85vw;
+        max-width: none;
     }
 
     .carousel-buttons button {
