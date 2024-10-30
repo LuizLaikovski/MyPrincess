@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kablammo&family=Playfair+Display:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Tangerine:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -24,7 +25,7 @@ body, html {
 }
 
 .faixa1 {
-    font-family: "Dancing Script", cursive;
+    font-family: "Tangerine", cursive;
     font-size: 20px;
     text-align: center;
 }
