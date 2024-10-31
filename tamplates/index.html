@@ -77,7 +77,7 @@
     </section>
     <header id="faixa" class="faixa1"><h1>Galeria da Gabizinha 😍💕</h1></header>
     <section class="pages" id="page5">
-        <div class="carousel" id="carousel">
+        <div class="carousel" id="carousel1">
             <img src="../images/pituchinha.jpg" alt="">
             <img src="../images/Beijinhoo.jpg" alt="">
             <img src="../images/Captura de tela 2024-10-29 133616.png" alt="">
@@ -97,20 +97,22 @@
             <img src="../images/cochorrito.jpg" alt="">
         </div>
         <div class="carousel-buttons">
-            <button onclick="scrollCarousel(-1)">&#10094; Anterior</button>
-            <button onclick="scrollCarousel(1)">Próxima &#10095;</button>
+            <button onclick="scrollCarousell(-1)">&#10094; Anterior</button>
+            <button onclick="scrollCarousell(1)">Próxima &#10095;</button>
         </div>
     </section>
     <header id="faixa" class="faixa1"><h1>Eu te Amo Gabriela</h1></header>
-
-
-
 
 
     <script>
         //Função para controlar a navegação do carrossel
         function scrollCarousel(direction) {
             const carousel = document.getElementById('carousel');
+            const scrollAmount = carousel.offsetWidth;
+            carousel.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+        }
+        function scrollCarousell(direction) {
+            const carousel = document.getElementById('carousel1');
             const scrollAmount = carousel.offsetWidth;
             carousel.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
         }
