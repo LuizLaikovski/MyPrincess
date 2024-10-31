@@ -97,20 +97,17 @@
             <img src="../images/cochorrito.jpg" alt="">
         </div>
         <div class="carousel-buttons">
-            <button onclick="scrollCarousel(-1)">&#10094; Anterior</button>
-            <button onclick="scrollCarousel(1)">Próxima &#10095;</button>
+            <button onclick="scrollCarousel(-1, 'carousel1')">&#10094; Anterior</button>
+            <button onclick="scrollCarousel(1, 'carousel1')">Próxima &#10095;</button>
         </div>
     </section>
     <header id="faixa" class="faixa1"><h1>Eu te Amo Gabriela</h1></header>
 
 
-
-
-
     <script>
         //Função para controlar a navegação do carrossel
-        function scrollCarousel(direction) {
-            const carousel = document.getElementById('carousel');
+        function scrollCarousel(direction, carouselId) {
+            const carousel = document.getElementById(carouselId);
             const scrollAmount = carousel.offsetWidth;
             carousel.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
         }
