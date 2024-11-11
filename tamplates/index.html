@@ -96,6 +96,10 @@
             <img src="../images/ksskskskksk.jpg" alt="">
             <img src="../images/cochorrito.jpg" alt="">
         </div>
+        <div class="carousel-buttons">
+            <button onclick="scrollCarousel(-1)">&#10094; Anterior</button>
+            <button onclick="scrollCarousel(1)">Próxima &#10095;</button>
+        </div>
     </section>
     <header id="faixa" class="faixa1"><h1>Eu te Amo Gabriela</h1></header>
 
@@ -107,6 +111,7 @@
             const scrollAmount = carousel.offsetWidth;
             carousel.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
         }
+
         function scrollCarousell(direction) {
             const carousel = document.getElementById('carousel1');
             const scrollAmount = carousel.offsetWidth;
